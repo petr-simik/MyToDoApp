@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    font-family: "Mulish", sans-serif;
+}
+
+:root {
+    --text: #eeedee;
+    --background: #160f13;
+    --primary: #ce9fbe;
+    --secondary: #7c2b60;
+    --accent: #d13098;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #160f13;
+}
+
+h1 {
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(180deg, #d13098, #ce9fbe);   
+    text-align: center;
+    font-size: 40px;
+    font-weight: 1000;
+    margin: 20px 20px 0px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--text);    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.uncompletedTasks {
+    text-align: center;
+    display: block;
+    font-weight: 700;
+    min-width: 25vh;
+    background-color: var(--primary);
+    margin: 20px;
+}
+
+p {
+    color: var(--background);
+    font-weight: bold;
+    border-radius: 15px;
+    padding-inline: 15px;
+    min-width: 180px;
+}
+
+.mainDiv {
+    width: 40vh;
+    background-color: #7c2b60;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+#container {
+    font-weight: 700;
+    width: 25vh;
+    background-color: #ce9fbe;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskSearch {
+    background-image: linear-gradient(180deg,rgb(255, 255, 255), rgb(235, 235, 235));
+    width: 20vh;
+    min-height: 50px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid rgb(90, 90, 90);
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.taskSearch:hover {
+    transform: scale(1.1);
+}
+
+#newTask {
+    width: 20vh;
+    min-height: 50px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid rgb(90, 90, 90);
+    margin-top: 20px;
+    transition: 0.5s; 
+}
+
+#newTask:hover {
+    transform: scale(1.1);
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #d13098;
+    box-shadow: 1px 1px 3px #160f13;
+    width: 95%;
+    overflow: hidden;
+    color: var(--text);
+    transition: 0.5s;
+}
+
+.task:hover {
+    transform: scale(1.05);
+}
+
+.task input[type="checkbox"] {
+    margin-right: 20px;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+    appearance: none;
+    border: 2px solid #ce9fbe;
+    background-color: #eeedee;
+    cursor: pointer;
+}
+
+.task input[type="checkbox"]:checked {
+    background-color: #7c2b60;
+}
+
+.task input[type="checkbox"]:checked + label{
+    text-decoration: line-through;
+    color: var(--secondary);
+}
+
+.form input[type="submit"] {
+    color: var(--background);
+    border-radius: 15px;
+    background-color: var(--primary);
+    width: 10vh;
+    padding: 15px 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.5s;    
+}
+
+.form input[type="submit"]:hover {
+    background-color: var(--accent);
+    color: var(--text);  
+    transform: scale(1.1);  
+}
+
+.task .delete-icon {
+    display: none;
+    cursor: pointer;
+    color: var(--secondary);
+    margin-left: 10px;
+    transition: 0.5s;
+
+}
+
+
+.task input[type="checkbox"]:checked ~ .delete-icon {
+    display: block;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    main {
+        padding: 0 auto;
+        margin: 0 auto;
+        min-height: fit-content;
+        min-height: fit-content;
+    }
+
+    .mainDiv {
+        width: 80%;
+        min-height: fit-content;
+    }
+    
+    #container {
+        width: 90%;
+    }
+
+    .left-tasks-p {
+        margin: 20px 0px;
+    }
+
+    .uncompletedTasks {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .taskSearch {
+        width: 100%;
+    }
+
+    #newTask {
+        width: 100%;
+    }
+
+    .form input[type="submit"] {
+        width: 60%;
+    }
+
+}
