@@ -60,7 +60,7 @@ p {
 
 .mainDiv {
     width: 40vh;
-    background-color: #7c2b60;
+    background-color: var(--secondary);
     display: flex;
     justify-content: center;
     align-content: center;
@@ -70,7 +70,7 @@ p {
 #container {
     font-weight: 700;
     width: 25vh;
-    background-color: #ce9fbe;
+    background-color: var(--primary);
 }
 
 div {
@@ -104,7 +104,7 @@ div {
 }
 
 .taskSearch:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 #newTask {
@@ -119,7 +119,7 @@ div {
 }
 
 #newTask:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .task {
@@ -127,19 +127,19 @@ div {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
     margin: 10px;
     border-radius: 10px;
-    background-color: #d13098;
+    background-color: var(--accent);
     box-shadow: 1px 1px 3px #160f13;
     width: 95%;
+    min-height: fit-content;
     overflow: hidden;
     color: var(--text);
     transition: 0.5s;
 }
 
 .task:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .task input[type="checkbox"] {
@@ -148,8 +148,8 @@ div {
     min-height: 30px;
     border-radius: 50%;
     appearance: none;
-    border: 2px solid #ce9fbe;
-    background-color: #eeedee;
+    border: 2px solid var(--primary);
+    background-color: var(--text);
     cursor: pointer;
 }
 
@@ -177,7 +177,7 @@ div {
 .form input[type="submit"]:hover {
     background-color: var(--accent);
     color: var(--text);  
-    transform: scale(1.1);  
+    transform: scale(1.05);  
 }
 
 .task .delete-icon {
@@ -199,6 +199,11 @@ div {
 
     h1 {
         font-size: 30px;
+        margin: 10px;
+    }
+
+    h2 {
+        margin: 10px;
     }
 
     main {
@@ -214,7 +219,11 @@ div {
     }
     
     #container {
-        width: 90%;
+        width: 85%;
+        padding-block: 1em;
+        min-height: fit-content;
+        max-height: 200px;
+        overflow: auto;
     }
 
     .left-tasks-p {
@@ -224,18 +233,29 @@ div {
     .uncompletedTasks {
         width: 90%;
         margin-top: 10px;
+        padding: 0.5% 0.5%;
+        margin: 0px;
+        margin-top: 5px;
     }
 
     .taskSearch {
         width: 100%;
+        height: 10%;
+    }
+
+    .task {
+        padding: 20px;
+        min-height: fit-content;
     }
 
     #newTask {
         width: 100%;
+        height: 10%;
     }
 
     .form input[type="submit"] {
-        width: 60%;
+        width: 40%;
+        padding: 10px 0px;
     }
 
 }
