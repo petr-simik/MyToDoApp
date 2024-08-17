@@ -1,6 +1,6 @@
 # My to do App
 
-## [Live Demo](https://qsoftin.github.io/Etch-a-Sketch/)
+## [Live Demo](https://qsoftin.github.io/MyToDoApp/)
 
 My own mini project - To Do App
 
