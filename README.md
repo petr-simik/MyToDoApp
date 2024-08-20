@@ -1,6 +1,6 @@
 # My to do App
 
-## [Live Demo](https://qsoftin.github.io/MyToDoApp/)
+## [Live Demo](https://petr-simik.github.io/MyToDoApp/)
 
 My own mini project - To Do App
 
